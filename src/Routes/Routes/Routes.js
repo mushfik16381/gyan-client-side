@@ -3,17 +3,22 @@ import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Courses from "../../Pages/Courses/Courses";
 import Faq from "../../Pages/Faq/Faq";
+import Login from "../../Pages/Login/Login";
+import Register from "../../Pages/Register/Register";
 
 export const routes = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>,
         loader: async() => {
-            return fetch(`https://gyan-server-side.vercel.app/products`)
+            return fetch(`https://gyan-server-side.vercel.app`)
         },
+        element: <Main></Main>,
         children: [
             {
                 path: '/courses',
+                loader: async() => {
+                    return fetch(`https://gyan-server-side.vercel.app`)
+                },
                 element: <Courses></Courses>
             },
             {
@@ -26,4 +31,12 @@ export const routes = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/login',
+        element: <Login></Login>
+    },
+    {
+        path: '/register',
+        element: <Register></Register>
+    }
 ])

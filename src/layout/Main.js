@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Header from '../Pages/Shared/Header/Header';
 import SideNav from '../Pages/Shared/SideNav/SideNav';
-import SideNavProduct from '../Pages/Shared/SideNavProduct/SideNavProduct';
 
 const Main = () => {
     return (
