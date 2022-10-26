@@ -9,9 +9,6 @@ import Register from "../../Pages/Register/Register";
 export const routes = createBrowserRouter([
     {
         path: '/',
-        loader: async() => {
-            return fetch(`https://gyan-server-side.vercel.app`)
-        },
         element: <Main></Main>,
         children: [
             {

@@ -1,0 +1,32 @@
+
+.card-container{
+    border-radius: 0;
+    border-radius: 20px !important;
+}
+.course-container img{
+    height: 170px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card_text h3{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.card-details .cor{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card-details .dur{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.btn-enroll{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

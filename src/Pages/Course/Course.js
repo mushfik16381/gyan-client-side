@@ -2,22 +2,37 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import './course.css';
 
 const Course = ({product}) => {
-    const {name, image_url, total_class, total_fee, duration} = product;
-    console.log(image_url);
+    const {name, details, image_url, total_class, total_fee, duration} = product;
+    let detail = details.slice(0, 178);
     return (
-        <div>
-            <Card>
-                {/* <Card.Img variant="top" src={image_url} /> */}
-                <img src={image_url} alt="" />
+        <div className='course-container'>
+            <Card className='card-container'>
+                <img className='img-fluid' src={image_url} alt="" />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title className='card_text'>
+                        <h3>{name}</h3>
+                    </Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                        <span>
+                            {detail}..<Link>Read More</Link>
+                        </span>
                     </Card.Text>
-                    <Link><Button variant="primary">Go somewhere</Button></Link>
+                    <div className='d-flex justify-content-between card-details'>
+                        <div >
+                            <p className='cor'>Courses:</p>
+                            <p className='dur'> {total_class} Months</p>
+                        </div>
+                        <div>
+                            <p className='cor'>Courses Fee:</p>
+                            <p className='dur'>{total_fee} USD</p>
+                        </div>
+                    </div>
+                    <div className='btn-enroll'>
+                    <Link ><Button variant="primary">Enroll Now</Button></Link>
+                    </div>
                 </Card.Body>
             </Card>
         </div>
