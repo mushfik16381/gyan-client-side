@@ -1,0 +1,41 @@
+.home-container{
+    background-image: url(../../images/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-container .overlay{
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    color: #fff;
+    padding-top: 170px;
+    padding-left: 100px;
+}
+.home-container .overlay h3{
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.home-container .overlay h4{
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.home-container .overlay p{
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+}
+.home-container .overlay .btn-course{
+    background: #fbaa33;
+    color: #111;
+    transition: .6s;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+.home-container .overlay .btn-course:hover{
+    background: #2E3E50;
+    color: #fff;
+}
