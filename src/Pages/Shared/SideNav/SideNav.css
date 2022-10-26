@@ -1,0 +1,12 @@
+.items-container{
+    padding-top: 20px;
+}
+.items-container a{
+    text-decoration: none;
+    color: #0A58D4;
+    font-size: 20px;
+    font-weight: 600;
+}
+.items-container a:hover{
+    color: #2E3E50;
+}
