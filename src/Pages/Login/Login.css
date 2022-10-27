@@ -1,0 +1,29 @@
+.login-container{
+    height: 100vh;
+    margin-top: 80px;
+}
+.login-container .text{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-weight: 600;
+}
+.login-container form{
+    background: #656e79;
+    padding: 40px;
+    border-radius: 20px;
+}
+.form-label{
+    color: #fff;
+}
+.login{
+    width: 100%;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #2d3e50;
+    color: #fff;
+    margin-top: 20px;
+}
