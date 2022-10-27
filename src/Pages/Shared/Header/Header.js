@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,10 @@ import Button from 'react-bootstrap/Button';
 import './Header.css';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/UserContext';
+import Form from 'react-bootstrap/Form';
+import { FaSun, FaMoon, FaUser } from "react-icons/fa";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 const Header = () => {
   const {user, logOut} = useContext(AuthContext)
@@ -25,6 +29,17 @@ const Header = () => {
             <Nav.Link as={Link} to="/Faq">FAQ</Nav.Link>
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
           </Nav>
+          <Nav className='d-flex align-items-center justify-content-between me-4'>
+            <FaSun></FaSun>
+          <Form className='text-center p-1
+          '>
+            <Form.Check 
+              type="switch"
+              id="custom-switch">
+            </Form.Check>
+          </Form>
+          <FaMoon></FaMoon>
+          </Nav>
           <Nav >
             {
               user?.uid ?
@@ -35,9 +50,16 @@ const Header = () => {
                 <Nav.Link as={Link} to="/register"><Button variant="outline-secondary">Register</Button></Nav.Link>
               </>
             }
+          </Nav>
+          <Nav>
+            <><OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip-disabled">{user?.displayName}</Tooltip>}>
+            <Nav.Link eventKey={2} href="#memes">{user?.photoURL ?
+              <Image style={{height:'30px'}} roundedCircle 
+              src={user.photoURL}></Image>
+              : <FaUser></FaUser>
+            }</Nav.Link>
+          </OverlayTrigger></>
             
-            
-            <span>{user?.email}</span>
           </Nav>
         </Navbar.Collapse>
       </Container>
