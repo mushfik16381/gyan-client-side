@@ -11,9 +11,9 @@ const CourseDetails = () => {
         <div className='mt-5 mb-5'>
             <Container>
                 <Row>
-                    <Col lg="5">
+                    <Col lg="6">
                         <h2 className='title'>{title}</h2>
-                        <h3>{name}</h3>
+                        <h3 className='name'>{name}</h3>
                         <div className='d-flex '>
                             <div className='info'>
                                 <p className='cor'>Course Duration</p>
@@ -28,11 +28,11 @@ const CourseDetails = () => {
                                 <p className='dur'>{total_project} USD</p>
                             </div>
                         </div>
-                        <h1>Course Overview</h1>
-                        <p>{details}</p>
+                        <h1 className='over-text'>Course Overview</h1>
+                        <p className='datails'>{details}</p>
                     </Col>
-                    <Col lg="7">
-                        <img src={image_url} alt="" />
+                    <Col lg="6">
+                        <img className='img img-fluid' src={image_url} alt="" />
                     </Col>
                 </Row>
             </Container>

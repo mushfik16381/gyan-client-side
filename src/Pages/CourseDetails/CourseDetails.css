@@ -5,11 +5,20 @@
     margin-right: 10px;
 }
 .title{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 33px;
+    color: #6287ad;
     text-transform: capitalize;
 }
+.name{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #2d3e50;
+    margin-bottom: 30px;
+}
+
 .info p{
     margin: 0;
     text-align: center;
@@ -22,4 +31,15 @@
 .info .dur{
     font-size: 20px;
     font-weight: 700;
+}
+.over-text{
+    margin-top: 40px;
+}
+.datails{
+    font-size: 18px;
+}
+.img{
+    margin-top: 120px;
+    border-radius: 20px;
+    margin-left: 40px;
 }
