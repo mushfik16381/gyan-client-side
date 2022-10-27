@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/UserContext';
 
 const Register = () => {
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
+    const {createUser} = useContext(AuthContext)
+
     const handleSubmit = event =>{
         event.preventDefault();
         const form = event.target;
         const name = form.name.value
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email,password, name);
         if(password.length < 6){
             setError('Password should be a characters or more.');
             return;
         }
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            form.reset();
+        })
+        
     }
     return (
         <div className='w-25 mx-auto login-container'>
