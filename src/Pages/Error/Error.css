@@ -1,0 +1,24 @@
+.error-container{
+    background-image: url(../../images/error.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+.btn-error{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    background: #2d3e50;
+    color: #fff;
+    transition: .6s;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+.btn-error:hover{
+    background: #4e6b8a;
+}
