@@ -1,3 +1,4 @@
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
@@ -7,7 +8,7 @@ import { AuthContext } from '../../Context/UserContext';
 import './Login.css'
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn, providerLogin} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -28,6 +29,26 @@ const Login = () => {
         })
         .catch(error => console.error(error));
     }
+    
+    const googleProvider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+        .then(result => {
+            const user = result.user
+            console.log(user)
+        })
+        .catch(error => console.error(error))
+    }
+    const githubProvider = new GithubAuthProvider();
+    const handleGithubSignIn = () => {
+        providerLogin(githubProvider)
+        .then(result => {
+            const user = result.user
+            console.log(user)
+        })
+        .catch(error => console.error(error))
+    }
+
     return (
         <div className='w-25 mx-auto login-container'>
             <h3 className='text'>Please Login Now!</h3>
@@ -45,8 +66,8 @@ const Login = () => {
                 <div className='d-flex justify-content-around align-items-center'>
                     <h4 className='log-text'>Or login with</h4>
                     <span>
-                        <button className='icon'><FaGoogle></FaGoogle></button>
-                        <button className='icon'><FaGithub></FaGithub></button>
+                        <button onClick={handleGoogleSignIn} className='icon'><FaGoogle></FaGoogle></button>
+                        <button onClick={handleGithubSignIn} className='icon'><FaGithub></FaGithub></button>
                     </span>
                     <span></span>
                 </div>
