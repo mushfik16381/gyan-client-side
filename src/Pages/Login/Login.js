@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
+import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext';
 import './Login.css'
@@ -41,6 +42,14 @@ const Login = () => {
                 </Form.Group>
                 <button className='login'>Login</button>
                 <p className='text-white mt-3'>New to Gyan <Link to='/register'> Create a New Account</Link></p>
+                <div className='d-flex justify-content-around align-items-center'>
+                    <h4 className='log-text'>Or login with</h4>
+                    <span>
+                        <button className='icon'><FaGoogle></FaGoogle></button>
+                        <button className='icon'><FaGithub></FaGithub></button>
+                    </span>
+                    <span></span>
+                </div>
             </Form>
         </div>
     );
