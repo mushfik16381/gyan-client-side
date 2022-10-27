@@ -5,7 +5,6 @@ import './SideNav.css'
 
 const SideNav = () => {
     const items = useLoaderData();
-    console.log(items);
 
     return (
         <div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './course.css';
 
 const Course = ({product}) => {
-    const {name, details, image_url, total_class, total_fee, duration} = product;
+    const {id, name, details, image_url, total_class, total_fee} = product;
     let detail = details.slice(0, 178);
     return (
         <div className='course-container'>
@@ -17,7 +17,7 @@ const Course = ({product}) => {
                     </Card.Title>
                     <Card.Text>
                         <span>
-                            {detail}.. <Link>Read More</Link>
+                            {detail}.. <Link to={`${id}`}>Read More</Link>
                         </span>
                     </Card.Text>
                     <div className='d-flex justify-content-between card-details'>

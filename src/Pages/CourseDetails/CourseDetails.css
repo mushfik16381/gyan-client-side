@@ -1,0 +1,25 @@
+.info{
+    border: 1px solid #2d3e50;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 10px;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 33px;
+    text-transform: capitalize;
+}
+.info p{
+    margin: 0;
+    text-align: center;
+}
+.info .cor{
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3e50;
+}
+.info .dur{
+    font-size: 20px;
+    font-weight: 700;
+}

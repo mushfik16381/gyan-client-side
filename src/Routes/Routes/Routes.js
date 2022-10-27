@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import Courses from "../../Pages/Courses/Courses";
 import Error from "../../Pages/Error/Error";
 import Faq from "../../Pages/Faq/Faq";
@@ -23,6 +24,11 @@ export const routes = createBrowserRouter([
                     return fetch(`https://gyan-server-side.vercel.app`)
                 },
                 element: <Courses></Courses>
+            },
+            {
+                path: '/courses/:id',
+                loader: ({params}) => fetch(`https://gyan-server-side.vercel.app/products/${params.id}`),
+                element: <CourseDetails></CourseDetails>
             },
             {
                 path: '/faq',
