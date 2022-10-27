@@ -53,7 +53,7 @@ const Header = () => {
           </Nav>
           <Nav>
             <><OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip-disabled">{user?.displayName}</Tooltip>}>
-            <Nav.Link eventKey={2} href="#memes">{user?.photoURL ?
+            <Nav.Link >{user?.photoURL ?
               <Image style={{height:'30px'}} roundedCircle 
               src={user.photoURL}></Image>
               : <FaUser></FaUser>

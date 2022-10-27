@@ -1,0 +1,15 @@
+.checkout-container{
+    width: 40%;
+    margin: 0 auto;
+    height: 100vh;
+    margin-top: 40px;
+}
+.checkout-container form{
+    background: #656e79;
+    padding: 40px;
+    border-radius: 20px;
+}
+.checkout-container .text-out{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
