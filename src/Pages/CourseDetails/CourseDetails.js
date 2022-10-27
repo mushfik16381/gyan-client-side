@@ -2,13 +2,15 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import './CourseDetails.css';
+import Pdf from "react-to-pdf";
 
-
+const ref = React.createRef();
 const CourseDetails = () => {
     const products =useLoaderData();
     const {name, title, details, image_url, total_class, duration, total_project} = products;
     return (
-        <div>
+        <div ref={ref}>
+
              <div className='mt-5 mb-5'>
                 <Container>
                 <Row>
@@ -28,6 +30,13 @@ const CourseDetails = () => {
                                 <p className='cor'>Projects:</p>
                                 <p className='dur'>{total_project} USD</p>
                             </div>
+                                <Pdf targetRef={ref} filename={`${name}.pdf`}>
+                                {({ toPdf }) => (
+                                    <button className="pdf-btn" onClick={toPdf}>
+                                    Download pdf
+                                    </button>
+                                )}
+                                </Pdf>
                         </div>
                         <h1 className='over-text'>Course Overview</h1>
                         <p className='details'>{details}</p>
