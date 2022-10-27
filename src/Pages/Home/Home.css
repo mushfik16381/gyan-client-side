@@ -39,3 +39,29 @@
     background: #2E3E50;
     color: #fff;
 }
+
+@media only screen and (max-width: 600px){
+    .home-container .overlay{
+        padding: 0;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+    .home-container .overlay h3 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .home-container .overlay h4 {
+        font-size: 35px;
+    }
+    .home-container .overlay p {
+        width: 98%;
+        text-align: left;
+        font-size: 18px;
+    }
+    .home-container .overlay .btn-course {
+        font-size: 17px;
+        font-weight: 500;
+        padding: 6px 10px;
+    }
+}

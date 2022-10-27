@@ -1,6 +1,10 @@
 .items-container{
     padding-top: 20px;
 }
+.items-container .title-items{
+    padding-bottom: 20px;
+    color: #111;
+}
 .items-container a{
     text-decoration: none;
     color: #0A58D4;
@@ -9,4 +13,9 @@
 }
 .items-container a:hover{
     color: #2E3E50;
+}
+@media only screen and (max-width: 600px){
+    .items-container{
+        display: none;
+    }
 }

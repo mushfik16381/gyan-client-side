@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import './Cheackout.css'
+import './CheckOut.css'
 
 const CheckOut = () => {
     return (

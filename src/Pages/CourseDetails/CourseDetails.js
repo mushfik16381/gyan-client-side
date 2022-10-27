@@ -1,15 +1,16 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
-import './CourseDetails.css'
+import './CourseDetails.css';
+
 
 const CourseDetails = () => {
     const products =useLoaderData();
     const {name, title, details, image_url, total_class, duration, total_project} = products;
-    console.log(products)
     return (
-        <div className='mt-5 mb-5'>
-            <Container>
+        <div>
+             <div className='mt-5 mb-5'>
+                <Container>
                 <Row>
                     <Col lg="6">
                         <h2 className='title'>{title}</h2>
@@ -38,9 +39,9 @@ const CourseDetails = () => {
                     <Link to='/checkout'><button className='btn-enroll-detail'>Enroll Now</button></Link>
                     </div>
                 </Row>
-            </Container>
+                </Container>
+             </div>
         </div>
     );
 };
-
 export default CourseDetails;

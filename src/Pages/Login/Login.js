@@ -50,7 +50,7 @@ const Login = () => {
     }
 
     return (
-        <div className='w-25 mx-auto login-container'>
+        <div className=' mx-auto login-container'>
             <h3 className='text'>Please Login Now!</h3>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -29,16 +29,15 @@ const Header = () => {
             <Nav.Link as={Link} to="/Faq">FAQ</Nav.Link>
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
           </Nav>
-          <Nav className='d-flex align-items-center justify-content-between me-4'>
-            <FaSun></FaSun>
-          <Form className='text-center p-1
-          '>
-            <Form.Check 
-              type="switch"
-              id="custom-switch">
-            </Form.Check>
-          </Form>
-          <FaMoon></FaMoon>
+            <Nav className='d-flex align-items-center justify-content-between me-4 toggle'>
+              <FaSun></FaSun>
+              <Form className='text-center p-1'>
+                <Form.Check 
+                  type="switch"
+                  id="custom-switch">
+                </Form.Check>
+              </Form>
+              <FaMoon></FaMoon>
           </Nav>
           <Nav >
             {
@@ -52,13 +51,13 @@ const Header = () => {
             }
           </Nav>
           <Nav>
-            <><OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip-disabled">{user?.displayName}</Tooltip>}>
+            <div className='user-img'><OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip-disabled">{user?.displayName}</Tooltip>}>
             <Nav.Link >{user?.photoURL ?
               <Image style={{height:'30px'}} roundedCircle 
               src={user.photoURL}></Image>
               : <FaUser></FaUser>
             }</Nav.Link>
-          </OverlayTrigger></>
+          </OverlayTrigger></div>
             
           </Nav>
         </Navbar.Collapse>
