@@ -1,15 +1,21 @@
 import React from 'react';
+import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+    const [error, setError] = useState(null)
     const handleSubmit = event =>{
         event.preventDefault();
         const form = event.target;
         const name = form.name.value
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email,password, name)
+        console.log(email,password, name);
+        if(password.length < 6){
+            setError('Password should be a characters or more.');
+            return;
+        }
     }
     return (
         <div className='w-25 mx-auto login-container'>
@@ -28,8 +34,9 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required/>
                 </Form.Group>
-                <Link to="/login"><span style={{ color:'#fff'}}>Already, have an account?</span></Link>
                 <button className='login'>Register</button>
+                <p className='text-white mt-3'>Already, have an account <Link to='/login'> Login</Link></p>
+                <p className='text-error'>{error}</p>
             </Form>
         </div>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
@@ -23,6 +24,7 @@ const Login = () => {
                     <Form.Control type="password" name="password" placeholder="Password" required/>
                 </Form.Group>
                 <button className='login'>Login</button>
+                <p className='text-white mt-3'>New to Gyan <Link to='/register'> Create a New Account</Link></p>
             </Form>
         </div>
     );
