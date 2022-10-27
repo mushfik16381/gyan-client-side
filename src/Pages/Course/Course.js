@@ -17,7 +17,7 @@ const Course = ({product}) => {
                     </Card.Title>
                     <Card.Text>
                         <span>
-                            {detail}..<Link>Read More</Link>
+                            {detail}.. <Link>Read More</Link>
                         </span>
                     </Card.Text>
                     <div className='d-flex justify-content-between card-details'>
