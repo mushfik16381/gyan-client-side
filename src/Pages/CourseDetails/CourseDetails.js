@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import './CourseDetails.css'
 
 const CourseDetails = () => {
@@ -29,11 +29,14 @@ const CourseDetails = () => {
                             </div>
                         </div>
                         <h1 className='over-text'>Course Overview</h1>
-                        <p className='datails'>{details}</p>
+                        <p className='details'>{details}</p>
                     </Col>
                     <Col lg="6">
                         <img className='img img-fluid' src={image_url} alt="" />
                     </Col>
+                    <div className='btn-detail '>
+                    <Link ><button className='btn-enroll-detail'>Enroll Now</button></Link>
+                    </div>
                 </Row>
             </Container>
         </div>

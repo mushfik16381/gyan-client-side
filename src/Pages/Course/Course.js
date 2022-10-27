@@ -31,7 +31,7 @@ const Course = ({product}) => {
                         </div>
                     </div>
                     <div className='btn-enroll'>
-                    <Link ><Button variant="primary">Enroll Now</Button></Link>
+                    <Link ><button className='btn-enroll-detail'>Enroll Now</button></Link>
                     </div>
                 </Card.Body>
             </Card>
