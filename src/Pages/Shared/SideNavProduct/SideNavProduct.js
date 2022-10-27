@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SideNavProduct = ({item}) => {
-    const {name} = item
+    const {name, id} = item
     return (
         <div className='pb-4'>
-            <Link>{name}</Link>
+            <Link to={`${id}`}>{name}</Link>
         </div>
     );
 };

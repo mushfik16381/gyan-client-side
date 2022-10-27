@@ -35,7 +35,7 @@ const CourseDetails = () => {
                         <img className='img img-fluid' src={image_url} alt="" />
                     </Col>
                     <div className='btn-detail '>
-                    <Link ><button className='btn-enroll-detail'>Enroll Now</button></Link>
+                    <Link to='/checkout'><button className='btn-enroll-detail'>Enroll Now</button></Link>
                     </div>
                 </Row>
             </Container>

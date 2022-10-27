@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import Button from 'react-bootstrap/Button';
 import './Header.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Context/UserContext';
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext)
     return (
         <Navbar bg="light" expand="lg">
       <Container>
@@ -22,9 +25,19 @@ const Header = () => {
             <Nav.Link as={Link} to="/Faq">FAQ</Nav.Link>
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
           </Nav>
-          <Nav className=''>
-            <Nav.Link as={Link} to="/login"><Button variant="outline-primary">Login</Button></Nav.Link>
-            <Nav.Link as={Link} to="/register"><Button variant="outline-secondary">Register</Button></Nav.Link>
+          <Nav >
+            {
+              user?.uid ?
+                <button className='log-out' onClick={logOut}>Log Out</button>
+              :
+              <>
+                <Nav.Link as={Link} to="/login"><Button variant="outline-primary">Login</Button></Nav.Link>
+                <Nav.Link as={Link} to="/register"><Button variant="outline-secondary">Register</Button></Nav.Link>
+              </>
+            }
+            
+            
+            <span>{user?.email}</span>
           </Nav>
         </Navbar.Collapse>
       </Container>
