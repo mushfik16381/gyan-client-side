@@ -13,9 +13,6 @@
 }
 
 @media only screen and (max-width: 600px){
-    .toggle{
-        display: none ;
-    }
     .user-img{
        display: none;
     }
